@@ -108,7 +108,7 @@ size_t Task::TryRead(std::vector<double> *buffer, innards::bool32 fillMode)
     return samplesRead;
 }
 
-void Task::SetupTrigger(int trigger_port, int edge, double gateTime /*ÏÍÒ*/)
+void Task::SetupTrigger(int trigger_port, int edge, double gateTime /*–º–∫—Å*/)
 {
     if(edge != DAQmx_Val_Falling && edge != DAQmx_Val_Rising)
         throw std::runtime_error("SetupTriggerEdge\nIncorrect edge");
