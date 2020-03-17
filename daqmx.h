@@ -44,11 +44,11 @@ namespace NIDAQmx
             }
             ~Task();
             void AddChannel(int device_num, int ai_port_measurement, int range);
-            /* Возвращает число каналов, закрепленных за таском */
+            /* Р’РѕР·РІСЂР°С‰Р°РµС‚ С‡РёСЃР»Рѕ РєР°РЅР°Р»РѕРІ, Р·Р°РєСЂРµРїР»РµРЅРЅС‹С… Р·Р° С‚Р°СЃРєРѕРј */
             size_t GetChannelCount( void ) const;
-            /* Задает частоту дискретизации и время измерения в мс */
+            /* Р—Р°РґР°РµС‚ С‡Р°СЃС‚РѕС‚Сѓ РґРёСЃРєСЂРµС‚РёР·Р°С†РёРё Рё РІСЂРµРјСЏ РёР·РјРµСЂРµРЅРёСЏ РІ РјСЃ */
             void SetupFiniteAcquisition(double samplesPerSecond, double time_ms);
-            void SetupTrigger(int trigger_port, int edge, double gateTime /*мкс*/);
+            void SetupTrigger(int trigger_port, int edge, double gateTime /*РјРєСЃ*/);
 
             void Start();
             void Stop();
