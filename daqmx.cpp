@@ -98,7 +98,7 @@ void Task::Stop()
 size_t Task::TryRead(std::vector<double> *buffer, innards::bool32 fillMode)
 {
     static const double fTimeout = 10.0; /* Seconds */
-    std::unique_ptr<double> tmp_buffer{std::make_unique<double>(m_bufferSize)};
+    std::unique_ptr<double[]> tmp_buffer{std::make_unique<double>(m_bufferSize)};
     buffer->reserve(m_bufferSize);
     innards::int32 samplesRead;
     innards::int32 error = innards::DAQmxReadAnalogF64(m_handle, DAQmx_Val_Auto, fTimeout, fillMode, tmp_buffer.get(), m_bufferSize, &samplesRead, NULL);
